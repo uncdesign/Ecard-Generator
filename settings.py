@@ -1,4 +1,4 @@
-# Django settings for ecardgen project.
+# Django settings for Ecard-Generator project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -63,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'ecardgen.urls'
+ROOT_URLCONF = 'Ecard-Generator.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
