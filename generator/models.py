@@ -9,17 +9,28 @@ class Card(models.Model):
 	bow = models.ForeignKey('Bow')
 	typeface = models.ForeignKey('Typeface')
 	
+	def __unicode__(self):
+		return self.id
+	
 class Picture(models.Model):
 	title = models.CharField(max_length = 255)
 	full = models.FileField(upload_to='pictures')
 	thumb = models.FileField(upload_to='pictures/thumbs')
+	
+	def __unicode__(self):
+		return self.title
 
 class Bow(models.Model):
 	title = models.CharField(max_length = 255)
 	full = models.FileField(upload_to='bows')
 	thumb = models.FileField(upload_to='bows/thumbs')	
 
+	def __unicode__(self):
+		return self.title
+
 class Typeface(models.Model):
 	title = models.CharField(max_length = 255)
 	fontstack = models.TextField()
 
+	def __unicode__(self):
+		return self.title
