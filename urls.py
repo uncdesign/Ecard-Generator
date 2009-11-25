@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from settings import *
+from settings import SITE_ROOT
+import os
 from generator.views import displaycard
 
 

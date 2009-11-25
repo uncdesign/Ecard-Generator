@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Your e-card{% endblock %}
+
+{% block content %}
+
+	<img src="{{ card.picture.full.url }}">
+	
+	<div style="font-family:{{ card.typeface.fontstack }}">
+	{{ card.message }}
+	</div>
+	
+	<img src="{{ card.bow.full.url }}">
+
+{% endblock %}
