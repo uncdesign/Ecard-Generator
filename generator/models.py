@@ -1,5 +1,4 @@
 from django.db import models
-from base64 import urlsafe_b64encode, urlsafe_b64decode
 
 class Card(models.Model):
 	toemail = models.CharField(max_length = 255)
@@ -10,9 +9,10 @@ class Card(models.Model):
 	picture = models.ForeignKey('Picture')
 	bow = models.ForeignKey('Bow')
 	typeface = models.ForeignKey('Typeface')
+	hashid = models.CharField(max_length = 255)
 	
 	def __unicode__(self):
-		return u'%s / last-modified: %s / hash: %s' % (self.id, self.timestamp, urlsafe_b64encode(str(self.id)))
+		return u'%s' % (self.id)
 	
 class Picture(models.Model):
 	title = models.CharField(max_length = 255)
