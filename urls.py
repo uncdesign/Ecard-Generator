@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from settings import SITE_ROOT
 import os
-from generator.views import displaycard
+from generator.views import displaycard, displaycardhash
 
 
 # Uncomment the next two lines to enable the admin:
@@ -19,6 +19,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^card/(?P<cardid>\d+)/', displaycard),
+    (r'^cardhash/(?P<cardid>.*)/', displaycardhash),
     (r'^admin/', include(admin.site.urls)),
     
 )
