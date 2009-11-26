@@ -18,8 +18,8 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^card/(?P<cardid>\d+)/', displaycard),
-    (r'^cardhash/(?P<cardid>.*)/', displaycardhash),
+    (r'^card/(?P<cardid>.*)/', displaycardhash),
+    
     (r'^admin/', include(admin.site.urls)),
     
 )
@@ -27,4 +27,5 @@ urlpatterns = patterns('',
 if settings.DEBUG:
 	urlpatterns += patterns('',
 		(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(SITE_ROOT, 'images')}),
+		(r'^cardid/(?P<cardid>\d+)/', displaycard),
 	)
