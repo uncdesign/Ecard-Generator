@@ -18,6 +18,8 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    (r'^create/$', createcard),
+    
     (r'^card/(?P<cardid>.*)/$', displaycardhash),
     
     (r'^admin/', include(admin.site.urls)),

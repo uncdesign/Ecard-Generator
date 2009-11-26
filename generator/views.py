@@ -10,3 +10,6 @@ def displaycard(request, cardid):
 def displaycardhash(request, cardid):
 	card = get_object_or_404(Card, hashid=cardid)
 	return render_to_response('displaycard.html', locals())
+	
+def createcard(request):
+	return render_to_response('createcard.html', locals())
