@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from settings import SITE_ROOT
 import os
-from generator.views import displaycard, displaycardhash
+from generator.views import displaycard, displaycardhash, createcard
 
 
 # Uncomment the next two lines to enable the admin:
