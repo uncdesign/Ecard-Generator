@@ -23,6 +23,7 @@ def createcard(request):
 			hash = random.getrandbits(128)
 			new_card.hashid = str(hash)
 			new_card.save()
+			return render_to_response("confirm.html", locals())
 			## do something.
 	else:
 		form = CreateCardForm()

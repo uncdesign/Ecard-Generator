@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+
+	Your card has been sent to our outbox. Your card should be sent soon. 
+	
+	<p>If you'd like, you can access your card, or send it to others, anytime <a href="/card/{{ new_card.hashid }}/">here</a></p>
+
+{% endblock %}
