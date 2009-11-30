@@ -4,10 +4,49 @@
 
 {% block content %}
 	
+	{% comment %}
 	<form method="POST" action="">
 		{{ form.as_p }}
 		
 		<input type="submit"></input>
 	</form>
+
+	['toemail', 'fromemail', 'message', 'typeface', 'picture', 'bow']
+	{% endcomment %}
+		
+	<form action="" method="POST">
+    <div class="fieldWrapper">
+        {{ form.picture.errors }}
+        <label for="id_picture">Pick your picture:</label>
+        {{ form.picture }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.bow.errors }}
+        <label for="id_bow">Pick a bow:</label>
+        {{ form.bow }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.message.errors }}
+        <label for="id_message">Your message:</label>
+        {{ form.message }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.typeface.errors }}
+        <label for="id_typeface">Choose a font:</label>
+        {{ form.typeface }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.toemail.errors }}
+        <label for="id_toemail">Your recipients e-mail:</label>
+        {{ form.toemail }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.fromemail.errors }}
+        <label for="id_fromemail">Your e-mail:</label>
+        {{ form.fromemail }}
+    </div>
+    <p><input type="submit" value="Submit Card" /></p>
+</form>
+
 
 {% endblock %}
