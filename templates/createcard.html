@@ -54,6 +54,11 @@
         <label for="id_fromemail">Your e-mail:</label>
         {{ form.fromemail }}
     </div>
+    <div class="fieldWrapper">
+        {{ form.fromname.errors }}
+        <label for="id_fromname">Your name:</label>
+        {{ form.fromname }}
+    </div>
     <p><input type="submit" value="Submit Card" /></p>
 </form>
 

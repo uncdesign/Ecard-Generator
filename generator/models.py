@@ -3,6 +3,7 @@ from django.db import models
 class Card(models.Model):
 	toemail = models.CharField(max_length = 255)
 	fromemail = models.CharField(max_length = 255)
+	fromname = models.CharField(max_length = 255)
 	message = models.TextField()
 	sent = models.BooleanField()
 	timestamp = models.DateTimeField(auto_now=True)
