@@ -88,3 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'Ecard-Generator.generator',
 )
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased'
+EMAIL_FILE_PATH = 'test-emails.txt' # change this to a proper location

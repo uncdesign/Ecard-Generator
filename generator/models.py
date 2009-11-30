@@ -5,7 +5,7 @@ class Card(models.Model):
 	fromemail = models.CharField(max_length = 255)
 	message = models.TextField()
 	sent = models.BooleanField()
-	timestamp = models.DateField(auto_now=True)
+	timestamp = models.DateTimeField(auto_now=True)
 	picture = models.ForeignKey('Picture')
 	bow = models.ForeignKey('Bow')
 	typeface = models.ForeignKey('Typeface')
