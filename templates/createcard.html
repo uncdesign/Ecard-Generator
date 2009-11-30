@@ -3,27 +3,30 @@
 {% block title %}Create your e-card{% endblock %}
 
 {% block content %}
-	
-	{% comment %}
-	<form method="POST" action="">
-		{{ form.as_p }}
-		
-		<input type="submit"></input>
-	</form>
-
-	['toemail', 'fromemail', 'message', 'typeface', 'picture', 'bow']
-	{% endcomment %}
 		
 	<form action="" method="POST">
     <div class="fieldWrapper">
         {{ form.picture.errors }}
         <label for="id_picture">Pick your picture:</label>
-        {{ form.picture }}
+        
+        <ul>
+        {% for item in picture_list %}
+		<li><label for="id_picture_{{ forloop.counter0 }}"><input type="radio" id="id_picture_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="picture">{{ item }} <img src="{{ item.thumb.url }}"></label></li>
+		{% endfor %}
+		</ul>
+        
+		
+        
     </div>
     <div class="fieldWrapper">
         {{ form.bow.errors }}
         <label for="id_bow">Pick a bow:</label>
-        {{ form.bow }}
+        
+        <ul>
+        {% for item in bow_list %}
+		<li><label for="id_bow_{{ forloop.counter0 }}"><input type="radio" id="id_bow_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="bow">{{ item }} <img src="{{ item.thumb.url }}"></label></li>
+		{% endfor %}
+		</ul>
     </div>
     <div class="fieldWrapper">
         {{ form.message.errors }}
@@ -33,7 +36,13 @@
     <div class="fieldWrapper">
         {{ form.typeface.errors }}
         <label for="id_typeface">Choose a font:</label>
-        {{ form.typeface }}
+        
+        <ul>
+        {% for item in typeface_list %}
+		<li><label for="id_typeface_{{ forloop.counter0 }}"><input type="radio" id="id_typeface_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="typeface"><span style="font-family:{{ item.fontstack|safe }}">{{ item }}</span></label></li>
+		{% endfor %}
+		</ul>
+        
     </div>
     <div class="fieldWrapper">
         {{ form.toemail.errors }}

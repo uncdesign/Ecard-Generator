@@ -14,6 +14,9 @@ def displaycardhash(request, cardid):
 	return render_to_response('displaycard.html', locals())
 	
 def createcard(request):
+	picture_list = Picture.objects.all()
+	typeface_list = Typeface.objects.all()
+	bow_list = Bow.objects.all()
 	form = CreateCardForm()
 	if request.method == 'POST':
 		form = CreateCardForm(request.POST)
@@ -27,7 +30,7 @@ def createcard(request):
 			## do something.
 	else:
 		form = CreateCardForm()
-	return render_to_response("createcard.html", { "form": form,})
+	return render_to_response("createcard.html", { "form": form,"bow_list": bow_list, "picture_list": picture_list, "typeface_list": typeface_list, })
 	
 	
 	#return render_to_response('createcard.html', locals())
