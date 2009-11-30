@@ -4,6 +4,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render_to_response
 from django.template.loader import render_to_string
 from django.template import Template, Context, loader
+from settings import SITE_URL
 
 class Command(NoArgsCommand):
 	def handle_noargs(self, **options):
@@ -12,6 +13,8 @@ class Command(NoArgsCommand):
 		for card in unsentcards:
 			#print template.render(Context({"card":card}))
 			print render_to_string('card.html', locals())
+			baseurl = SITE_URL
+			print render_to_string('card.txt', locals())
 			card.sent = True
 			card.save()
 		return '\n'.join(['%s %s' % (k.timestamp, k.hashid) for k in unsentcards]).encode('utf-8')

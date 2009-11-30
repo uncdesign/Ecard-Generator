@@ -1,0 +1,4 @@
+{{ card.fromname }} ({{ card.fromemail }}) has sent you an e-card.
+
+Click here to view it: 
+{{ baseurl }}/card/{{ card.hashid }}/

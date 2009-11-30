@@ -4,6 +4,7 @@ import django
 # used as starting points for various other paths
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+SITE_URL = 'http://152.2.194.196:8000'
 
 # Django settings for Ecard-Generator project.
 

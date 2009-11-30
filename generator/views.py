@@ -2,6 +2,7 @@ from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from generator.models import Card, Picture, Bow, Typeface
 from generator.forms import CreateCardForm
+from settings import MEDIA_URL
 import random
 # Create your views here.
 
@@ -18,6 +19,7 @@ def createcard(request):
 	typeface_list = Typeface.objects.all()
 	bow_list = Bow.objects.all()
 	form = CreateCardForm()
+	mediaurl = MEDIA_URL
 	if request.method == 'POST':
 		form = CreateCardForm(request.POST)
 		if form.is_valid():
@@ -30,7 +32,7 @@ def createcard(request):
 			## do something.
 	else:
 		form = CreateCardForm()
-	return render_to_response("createcard.html", { "form": form,"bow_list": bow_list, "picture_list": picture_list, "typeface_list": typeface_list, })
+	return render_to_response("createcard.html", locals())
 	
 	
 	#return render_to_response('createcard.html', locals())
