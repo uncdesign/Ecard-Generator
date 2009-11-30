@@ -22,10 +22,9 @@ class Command(NoArgsCommand):
 			html_content = render_to_string('card.html', locals())
 			msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 			msg.attach_alternative(html_content, "text/html")
-			msg.send()
-		
-			card.sent = True
-			#card.save()
+			if msg.send():
+				card.sent = True
+				card.save()
 		return '\n'.join(['%s %s' % (k.timestamp, k.hashid) for k in unsentcards]).encode('utf-8')
 		
 		
