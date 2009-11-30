@@ -12,7 +12,7 @@ $(document).ready(function() {
 		
 				
 		$('#message_field textarea').keyup( function() {
-			$('#message').html('<p>' + $(this).val() + '</p>');
+			$('#message').text($(this).val());
 		});
 		
 		$('#fromname_field input').keyup( function() {
@@ -78,7 +78,7 @@ $(document).ready(function() {
     </div>
     <div class="fieldWrapper" id="message_field">
         {{ form.message.errors }}
-        <label for="id_message">Your message:</label>
+        <label for="id_message">Your message:</label><br>
         {{ form.message }}
     </div>
     <div class="fieldWrapper" id="typeface_field">
@@ -94,7 +94,7 @@ $(document).ready(function() {
     </div>
     <div class="fieldWrapper" id="toemail_field">
         {{ form.toemail.errors }}
-        <label for="id_toemail">Your recipients e-mail:</label>
+        <label for="id_toemail">Your recipient's e-mail:</label>
         {{ form.toemail }}
     </div>
     <div class="fieldWrapper" id="fromemail_field">
@@ -112,7 +112,7 @@ $(document).ready(function() {
  <p>&nbsp;</p>
  
  <fieldset id="cardpreview">
- <legend><h2>Preview</h2></legend>
+ <legend><h2>Live Preview</h2></legend>
  	<img id="picture" src="{{ mediaurl }}clear.gif">
 	
 	<div id="message">
@@ -126,7 +126,7 @@ $(document).ready(function() {
  </fieldset>
 
 
-   <p><input type="submit" value="Submit Card" /></p>
+   <p><input type="submit" value="Send Card" /></p>
 
 </form>
 
