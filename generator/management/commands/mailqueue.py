@@ -1,10 +1,10 @@
 from django.core.management.base import NoArgsCommand
 from generator.models import Card, Picture, Bow, Typeface
-from django.core.mail import EmailMultiAlternatives
+from django.core.mail import EmailMultiAlternatives, send_mail
 from django.shortcuts import render_to_response
 from django.template.loader import render_to_string
 from django.template import Template, Context, loader
-from settings import SITE_URL
+from settings import *
 
 class Command(NoArgsCommand):
 	def handle_noargs(self, **options):
@@ -12,11 +12,20 @@ class Command(NoArgsCommand):
 		#template = loader.get_template("card.html")
 		for card in unsentcards:
 			#print template.render(Context({"card":card}))
-			print render_to_string('card.html', locals())
+			#print render_to_string('card.html', locals())
+			#print render_to_string('card.txt', locals())
+		
 			baseurl = SITE_URL
-			print render_to_string('card.txt', locals())
+			
+			subject, from_email, to = "You've received an ecard", card.fromemail, card.toemail
+			text_content = render_to_string('card.txt', locals())
+			html_content = render_to_string('card.html', locals())
+			msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+			msg.attach_alternative(html_content, "text/html")
+			msg.send()
+		
 			card.sent = True
-			card.save()
+			#card.save()
 		return '\n'.join(['%s %s' % (k.timestamp, k.hashid) for k in unsentcards]).encode('utf-8')
 		
 		
