@@ -20,14 +20,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^create/$', createcard),
     
-    (r'^card/(?P<cardid>.*)/$', displaycardhash),
-    
-    (r'^admin/', include(admin.site.urls)),
-    
+	('', include('generator.urls')),
 )
 
-if settings.DEBUG:
-	urlpatterns += patterns('',
-		(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(SITE_ROOT, 'images')}),
-		(r'^cardid/(?P<cardid>\d+)/', displaycard),
-	)
