@@ -35,4 +35,10 @@ def createcard(request):
 	return render_to_response("createcard.html", locals())
 	
 	
-	#return render_to_response('createcard.html', locals())
+def stats(request):
+	cards_unsent = Card.objects.filter(sent=False).count()
+	cards_in_db = Card.objects.count()
+	lastest_card = Card.objects.latest('id')
+	cards_total = lastest_card.id
+	cards_sent = cards_total - cards_unsent
+	return render_to_response("stats.html", locals())

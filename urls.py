@@ -1,8 +1,5 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from settings import SITE_ROOT
-import os
-from generator.views import displaycard, displaycardhash, createcard
 
 
 # Uncomment the next two lines to enable the admin:
@@ -18,8 +15,9 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^create/$', createcard),
     
-	('', include('generator.urls')),
+    (r'^admin/', include(admin.site.urls)),
+    
+    ('', include('generator.urls')),
+    
 )
-

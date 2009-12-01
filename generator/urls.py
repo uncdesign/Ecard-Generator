@@ -2,13 +2,15 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from settings import SITE_ROOT
 import os
-from generator.views import displaycard, displaycardhash, createcard
+from generator.views import displaycard, displaycardhash, createcard, stats
 
 urlpatterns = patterns('',
 
     (r'^create/$', createcard),
     
     (r'^card/(?P<cardid>.*)/$', displaycardhash), 
+    
+    (r'^stats/$', stats), 
     
 )
 
