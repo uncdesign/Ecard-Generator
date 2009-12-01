@@ -4,7 +4,7 @@ import django
 # used as starting points for various other paths
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-SITE_URL = 'http://152.2.194.196:8000'
+SITE_URL = 'http://152.2.194.196:8000'  # Used to generate urls for web version emails
 
 # Django settings for Ecard-Generator project.
 
@@ -89,7 +89,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'Ecard-Generator.generator',
 )
-
 
 #EMAIL_BACKEND = 'django.core.mail.backends.filebased'
 #EMAIL_FILE_PATH = 'test-emails.txt' # change this to a proper location

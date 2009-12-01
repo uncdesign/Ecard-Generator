@@ -1,1 +1,0 @@
-[{"pk": 1, "model": "generator.bow", "fields": {"full": "bows/redbow.jpg", "thumb": "bows/thumbs/redbow_a.jpg", "title": "Red"}}, {"pk": 2, "model": "generator.bow", "fields": {"full": "bows/purplebow.jpg", "thumb": "bows/thumbs/purplebow_a.jpg", "title": "Purple"}}]

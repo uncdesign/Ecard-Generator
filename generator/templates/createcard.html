@@ -32,8 +32,8 @@ $(document).ready(function() {
 			$('#picture').attr('src', $(this).find('img').attr('rel'))
 		})
 	
-		$('#bow_field label').click( function() {
-			$('#bow').attr('src', $(this).find('img').attr('rel'))
+		$('#border_field label').click( function() {
+			$('#border').attr('src', $(this).find('img').attr('rel'))
 		})
 
 		
@@ -66,13 +66,13 @@ $(document).ready(function() {
 		
         
     </div>
-    <div class="fieldWrapper" id="bow_field">
-        {{ form.bow.errors }}
-        <label for="id_bow">Pick a bow:</label>
+    <div class="fieldWrapper" id="border_field">
+        {{ form.border.errors }}
+        <label for="id_border">Pick a bow:</label>
         
         <ul>
-        {% for item in bow_list %}
-		<li><label for="id_bow_{{ forloop.counter0 }}"><input type="radio" id="id_bow_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="bow">{{ item }} <img src="{{ item.thumb.url }}" rel="{{ item.full.url }}"></label></li>
+        {% for item in border_list %}
+		<li><label for="id_border_{{ forloop.counter0 }}"><input type="radio" id="id_border_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="border">{{ item }} <img src="{{ item.thumb.url }}" rel="{{ item.thumb.url }}"></label></li>
 		{% endfor %}
 		</ul>
     </div>
@@ -118,7 +118,7 @@ $(document).ready(function() {
 	<div id="message">
 	</div>
 	
-	<img id="bow" src="{{ mediaurl }}clear.gif">
+	<img id="border" src="{{ mediaurl }}clear.gif">
 	
 	<p id="from">From <span id="name"></span><br>
 	<span id="email"></span>	
