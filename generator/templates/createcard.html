@@ -26,6 +26,7 @@
 		
 		<div class="fieldWrapper" id="message_field">
 			{{ form.message.errors }}
+			 <label for="id_message">Your greeting:</label>
 			{{ form.message }}
     	</div>
     	
@@ -63,7 +64,8 @@
         <label for="id_picture">Choose your picture:</label>
         <ul class="optionslist">
         {% for item in picture_list %}
-		<li><label for="id_picture_{{ forloop.counter0 }}"><input type="radio" id="id_picture_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="picture"><img src="{{ item.thumb.url }}" rel="{{ item.full.url }}"></label></li>
+		<li><label for="id_picture_{{ item.id }}"><input type="radio" id="id_picture_{{ item.id }}" value="{{ item.id }}" name="picture" {% ifequal request.POST.picture|urlencode item.id|urlencode %} checked="checked" {% endifequal %}>
+		<img src="{{ item.thumb.url }}" rel="{{ item.full.url }}"></label></li>
 		{% endfor %}
 		</ul>
 		<div class="clearboth"></div>
@@ -73,7 +75,8 @@
         <label for="id_border">Choose your bow color:</label>
         <ul class="optionslist">
         {% for item in border_list %}
-		<li><label for="id_border_{{ forloop.counter0 }}"><input type="radio" id="id_border_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="border"><img src="{{ item.thumb.url }}" rel="{{ item.preview.url }}"></label></li>
+		<li><label for="id_border_{{ item.id }}"><input type="radio" id="id_border_{{ item.id }}" value="{{ item.id }}" name="border" {% ifequal request.POST.border|urlencode item.id|urlencode %} checked="checked" {% endifequal %}>
+		<img src="{{ item.thumb.url }}" rel="{{ item.preview.url }}"></label></li>
 		{% endfor %}
 		</ul>
 		<div class="clearboth"></div>
@@ -84,7 +87,7 @@
         <label for="id_typeface">Choose your typestyle:</label>
         <ul class="optionslist">
         {% for item in typeface_list %}
-		<li><label for="id_typeface_{{ forloop.counter0 }}" style="font-family:{{ item.fontstack|safe }}"><input type="radio" id="id_typeface_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="typeface">
+		<li><label for="id_typeface_{{ item.id }}" style="font-family:{{ item.fontstack|safe }}"><input type="radio" id="id_typeface_{{ item.id }}" value="{{ item.id }}" name="typeface" {% ifequal request.POST.typeface|urlencode item.id|urlencode %} checked="checked" {% endifequal %}>
 		{{ item }}</label></li>
 		{% endfor %}
 		</ul>

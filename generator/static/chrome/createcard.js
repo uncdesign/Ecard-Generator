@@ -29,7 +29,7 @@ $(document).ready(function() {
 				$('.bowpreviews').css('background-image', 'url(' + $(selected).find('img').attr('rel') + ')' )
 			}
 			
-
+			
 			
 			$('#typeface_field label').click( function() {
 				set_typeface(this);
@@ -43,6 +43,8 @@ $(document).ready(function() {
 				set_border(this);
 			})
 			
+			
+			$('input:radio:checked').click();
 			
 		}
 });

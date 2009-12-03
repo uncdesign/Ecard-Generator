@@ -1,7 +1,9 @@
-// Stylesheet Prepared by Chris Johnson
-// UNC Design Services http://unc.edu/design
+/* 
+Stylesheet Prepared by Chris Johnson
+UNC Design Services http://unc.edu/design 
+*/
 
-body { background: #fff; text-align: center; }
+body { background: #BCD5E8; text-align: center; }
 
 #wrapper { width: 901px; height: 612px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; position: relative; font-size: 12px; color: #363837; }
 
@@ -40,11 +42,9 @@ ul.optionslist { list-style: none; }
 
 #livepreview #picture { float: left; border: 3px solid #9BBAD8; margin-right: 15px; }
 
-#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; z-index: 2}
+#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; z-index: 2; background: #f4f8fb; padding: 5px;}
 
-#fromemail_field input, #fromname_field input, #toemail_field input { padding: 5px; }
-
-#message_field textarea { width: 252px; background: none; font-family: Courier; font-size: 13px; line-height: 1.4; height: 120px; }
+#message_field textarea { font-family: Courier; font-size: 13px; line-height: 1.4; height: 90px; color: #00467F; }
 
 #sendbutton { float: right; margin-right: -10px; }
 

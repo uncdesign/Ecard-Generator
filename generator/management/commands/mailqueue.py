@@ -12,7 +12,7 @@ class Command(NoArgsCommand):
 		unsentcards = Card.objects.filter(sent=False).order_by("timestamp")[:35] #Get the oldest unsent emails
 		for card in unsentcards:		
 			baseurl = SITE_URL
-			subject, from_email, to = "You've received an ecard", card.fromemail, card.toemail
+			subject, from_email, to = "You've received a Carolina ecard", card.fromemail, card.toemail
 			text_content = render_to_string('card.txt', locals())
 			html_content = render_to_string('card.html', locals())
 			msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
