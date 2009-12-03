@@ -3,6 +3,6 @@
 
 body { background: #fff; }
 
-#wrapper { background: url(bg.jpg) no-repeat top center; margin-top 3em;}
+#wrapper { background: url(bg.jpg) no-repeat top center; padding-top 3em;}
 
 .clearboth	{ clear: both; }
