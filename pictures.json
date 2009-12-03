@@ -1,1 +1,0 @@
-[{"pk": 1, "model": "generator.picture", "fields": {"full": "pictures/snowman.jpg", "thumb": "pictures/thumbs/snowman_a.jpg", "title": "Snowman"}}, {"pk": 2, "model": "generator.picture", "fields": {"full": "pictures/belltowersnow.jpg", "thumb": "pictures/thumbs/belltowersnow_a.jpg", "title": "Belltower in Snow"}}]
