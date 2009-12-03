@@ -20,15 +20,15 @@ a:hover { color: #6699cc; }
 
 #options .fieldWrapper { margin-bottom: .75em; }
 
-ul.optionslist { list-style: none; }
+#options .fieldWrapper ul { list-style: none; }
 
-.optionslist li { float: left; }
+#options .fieldWrapper li { float: left; }
 
-#picture_field .optionslist li { margin-right: 8px;}
+#picture_field li { margin-right: 8px;}
 
-#border_field .optionslist li { margin-right: 30px;}
+#border_field li { margin-right: 30px;}
 
-#typeface_field .optionslist li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
+#typeface_field li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
 #options input { display: none; }
 
@@ -50,7 +50,7 @@ ul.optionslist { list-style: none; }
 
 .errorlist { list-style: none; font-size: 11px; color: red; }
 
-#options .errorlist { float: left; }
+#options ul.errorlist li { float: none; }
 
 /* .bowpreviews { border: 1px solid pink; } */
 

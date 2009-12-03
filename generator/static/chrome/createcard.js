@@ -7,18 +7,18 @@ $(document).ready(function() {
 		else {
 			$('.disabled-default').show();
 			$('#msg').hide();
+			
+			//Hide form stuff from non-JS bots
 			$('#createcard').wrap('<form action="" method="POST"></form>');
 			$('#rightcol').append('<input type="image" src="/static/chrome/send.png" id="sendbutton">');
-	
-			/*$('textarea').bind("focus", function() { 
-			  $(this).caret(this.value.length); 
-			}); */
+
+
+			$('textarea').focus(); // Put the cursor in the text box
 			
-			$('textarea').focus();
-			
+			//Live Preview Code
 			
 			function set_typeface(selected){
-				$('textarea').css('font-family', $(selected).css('font-family'));
+				$('textarea').css('font-family', $('span',selected).css('font-family'));
 			}
 			
 			function set_picture(selected){
@@ -43,8 +43,8 @@ $(document).ready(function() {
 				set_border(this);
 			})
 			
-			
-			$('input:radio:checked').click();
-			
+			// If there are fields selected when the form loads, show the preview of the selection
+			$('input:radio:checked').click(); 		
+				
 		}
 });

@@ -1,6 +1,7 @@
 import os
 import django
 
+DEBUG = True
 
 # calculated paths for django and the site
 # used as starting points for various other paths
