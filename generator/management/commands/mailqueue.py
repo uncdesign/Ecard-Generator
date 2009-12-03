@@ -9,7 +9,7 @@ from settings import *
 class Command(NoArgsCommand):
 	"""Send unsent emails in the database, then set emails to sent=true"""
 	def handle_noargs(self, **options):
-		unsentcards = Card.objects.filter(sent=False).order_by("timestamp")[:2] #Get the oldest unsent emails
+		unsentcards = Card.objects.filter(sent=False).order_by("timestamp")[:35] #Get the oldest unsent emails
 		for card in unsentcards:		
 			baseurl = SITE_URL
 			subject, from_email, to = "You've received an ecard", card.fromemail, card.toemail
@@ -20,4 +20,4 @@ class Command(NoArgsCommand):
 			if msg.send():
 				card.sent = True
 				card.save()
-		return '\n'.join(['%s %s' % (k.timestamp, k.hashid) for k in unsentcards]).encode('utf-8')
+		return '\n'.join(['id: %s time: %s hash id: %s sent: %s' % (k.id, k.timestamp, k.hashid, k.sent) for k in unsentcards]).encode('utf-8')
