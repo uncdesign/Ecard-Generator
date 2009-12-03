@@ -4,13 +4,19 @@
 
 {% block htmlhead %}
 
-<script type="text/javascript" src="/static/chrome/livepreview.js"></script>
+<script type="text/javascript" src="/static/chrome/createcard.js"></script>
 
 {% endblock %}
 
 {% block content %}
 
-<form action="" method="POST">		
+<div id="createcard" class="disabled-default">
+
+<div class="hide">
+
+<h1>Happy Holidays from Carolina!</h1>
+
+</div>
 
 <div id="livepreview">
 
@@ -43,7 +49,7 @@
 		</div>
 
 		
-	    <p><input type="submit" value="Send!" /></p>
+	    
 	
 	</div><!--/rightcol-->
 	
@@ -54,48 +60,85 @@
 <div id="options">
     <div class="fieldWrapper" id="picture_field">
         {{ form.picture.errors }}
-        <label for="id_picture">Pick your picture:</label>
+        <label for="id_picture">Choose your picture:</label>
         
-        <ul>
+        <ul class="optionslist">
         {% for item in picture_list %}
 		<li><label for="id_picture_{{ forloop.counter0 }}"><input type="radio" id="id_picture_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="picture"><img src="{{ item.thumb.url }}" rel="{{ item.full.url }}"></label></li>
 		{% endfor %}
 		</ul>
         
-		
+		<div class="clearboth"></div>
     </div>
     <div class="fieldWrapper" id="border_field">
         {{ form.border.errors }}
-        <label for="id_border">Pick a bow:</label>
+        <label for="id_border">Choose your bow color:</label>
         
-        <ul>
+        <ul class="optionslist">
         {% for item in border_list %}
-		<li><label for="id_border_{{ forloop.counter0 }}"><input type="radio" id="id_border_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="border"><img src="{{ item.thumb.url }}" rel="{{ item.thumb.url }}"></label></li>
+		<li><label for="id_border_{{ forloop.counter0 }}"><input type="radio" id="id_border_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="border"><img src="{{ item.thumb.url }}" rel="{{ item.preview.url }}"></label></li>
 		{% endfor %}
 		</ul>
+		
+		<div class="clearboth"></div>
     </div>
 
     <div class="fieldWrapper" id="typeface_field">
         {{ form.typeface.errors }}
-        <label for="id_typeface">Choose a font:</label>
+        <label for="id_typeface">Choose your typestyle:</label>
         
-        <ul>
+        <ul class="optionslist">
         {% for item in typeface_list %}
 		<li><label for="id_typeface_{{ forloop.counter0 }}" style="font-family:{{ item.fontstack|safe }}"><input type="radio" id="id_typeface_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="typeface">{{ item }}</label></li>
 		{% endfor %}
 		</ul>
         
+        <div class="clearboth"></div>
     </div>
+    
+    
    	
 </div><!--/options-->
 
-</form>
 
-<div id="bow_top_left">&nbsp;</div>
-<div id="bow_bottom_right">&nbsp;</div>
+<div class="clearboth"></div>
 
 <div id="copyright">&copy; All rights reserved.</div>
 
 <div class="clearboth"></div>
+
+
+</div><!--/createcard-->
+
+
+
+<div id="msg">
+
+	<h3>Sorry!</h3> 
+	
+	<span>This site requires JavaScript. <a href="https://www.google.com/adsense/support/bin/answer.py?answer=12654">Enable it in your browser</a> and try again.</span>
+
+
+
+	<!--[if lt IE 7]>
+		<script type="text/javascript">
+			islessthanie7 = True;
+		</script>
+		<style type="text/css"> 
+			#msg span, .bowpreviews { display:none; }
+			#msg {width: 75%; margin-left: 50px;}
+		</style>
+		<br>
+		 <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'><div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div></div></div>
+		
+	<![endif]-->
+
+</div><!--/msg -->
+
+<div class="clearboth"></div>
+
+
+
+
 
 {% endblock %}

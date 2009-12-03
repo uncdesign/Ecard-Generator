@@ -1,26 +1,64 @@
 // Stylesheet Prepared by Chris Johnson
 // UNC Design Services http://unc.edu/design
 
-body { background: #fff; text-align: center;}
+body { background: #fff; text-align: center; }
 
-#wrapper { width: 901px; height: 612px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; text-align: left; margin-left: auto; margin-right: auto;}
+#wrapper { width: 901px; height: 612px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; position: relative; font-size: 12px; color: #363837; }
+
+a { text-decoration: underline; color: #363837; }
+a:hover { color: #6699cc; }
+
+.hide { line-height: 0; margin-left: -9999px; text-indent: -9999px; }
+
+.disabled-default { display: none; }
 
 .clearboth	{ clear: both; }
 
-#options ul { list-style: none; }
+#options { float: left; width: 230px; margin-top: 160px;}
 
-#options li { float: left; }
+#options .fieldWrapper { margin-bottom: 1em; }
 
-#picture_field li { margin-right: 8px;}
+ul.optionslist { list-style: none; }
 
-#border_field li { margin-right: 30px;}
+.optionslist li { float: left; }
 
-#typeface_field li { margin-right: 20px;}
+#picture_field .optionslist li { margin-right: 8px;}
+
+#border_field .optionslist li { margin-right: 30px;}
+
+#typeface_field .optionslist li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
 #options input { display: none; }
 
 #options label { cursor: pointer }
 
-#livepreview { width: 540px; float: left; }
+#livepreview { width: 510px; float: left; padding: 15px; background: #DFEAF4; border: 1px solid #C6C8CC;  margin-top: 150px; margin-left: 80px; margin-right: 25px;}
 
-#livepreview #rightcol { float: right; width: 252px; }
+#livepreview .fieldWrapper { margin-bottom: .5em; }
+
+#livepreview #rightcol { float: left; width: 252px; }
+
+#livepreview #picture { float: left; border: 2px solid #9BBAD8; margin-right: 15px; }
+
+#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; }
+
+#fromemail_field input, #fromname_field input, #toemail_field input { padding: 5px; }
+
+#message_field textarea { width: 252px; background: none; font-family: Courier; z-index: 10; font-size: 13px; line-height: 1.4; height: 120px; }
+
+#sendbutton { float: right; margin-right: -10px; }
+
+.errorlist { list-style: none; font-size: 11px; color: red; }
+
+/* .bowpreviews { border: 1px solid pink; } */
+
+#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; background-image: url(/static/chrome/bluepreview.png);}
+#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 166px; background-image: url(/static/chrome/bluepreview.png); background-position: -114px top; }
+#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-image: url(/static/chrome/bluepreview.png); background-position: bottom right;}
+
+#copyright { font-size: 10px; color: #00467F; margin-left: 110px; margin-top: 15px;}
+
+
+#msg { font-size: 1.2em; font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; background: #fff; width: 50%; padding: 20px; z-index: 10; margin-top: 200px; margin-left: 150px; float: left;  }
+
+#msg h3 { color:#003d67; font-size: 1.4em;  }
