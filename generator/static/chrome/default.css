@@ -28,7 +28,7 @@ ul.optionslist { list-style: none; }
 
 #typeface_field .optionslist li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
-#options input { display: none; }
+/* #options input { display: none; } */
 
 #options label { cursor: pointer }
 
@@ -49,6 +49,8 @@ ul.optionslist { list-style: none; }
 #sendbutton { float: right; margin-right: -10px; }
 
 .errorlist { list-style: none; font-size: 11px; color: red; }
+
+#options .errorlist { float: left; }
 
 /* .bowpreviews { border: 1px solid pink; } */
 

@@ -9,32 +9,39 @@ $(document).ready(function() {
 			$('#msg').hide();
 			$('#createcard').wrap('<form action="" method="POST"></form>');
 			$('#rightcol').append('<input type="image" src="/static/chrome/send.png" id="sendbutton">');
+	
+	
+			function set_typeface(selected){
+				$('textarea').css('font-family', $(selected).css('font-family'));
+			}
 			
+			function set_picture(selected){
+				$('#picture').attr('src', $(selected).find('img').attr('rel'))
+			}
 			
-			$('#message_field textarea').keyup( function() {
-				$('#message').text($(this).val());
-			});
+			function set_border(selected){
+				$('.bowpreviews').css('background-image', 'url(' + $(selected).find('img').attr('rel') + ')' )
+			}
 			
-			$('#fromname_field input').keyup( function() {
-				$('#name').html($(this).val());
-			});
-			
-			$('#fromemail_field input').keyup( function() {
-				$('#email').html($(this).val());
-			});
-			
+
 			
 			$('#typeface_field label').click( function() {
-				$('textarea').css('font-family', $(this).css('font-family'));
+				set_typeface(this);
 			})
 			
 			$('#picture_field label').click( function() {
-				$('#picture').attr('src', $(this).find('img').attr('rel'))
+				set_picture(this);
 			})
 		
 			$('#border_field label').click( function() {
-				$('.bowpreviews').css('background-image', 'url(' + $(this).find('img').attr('rel') + ')' )
+				set_border(this);
 			})
-
+			
+			
+			
+			/* $('#border_field input:radio').filter(':checked').ready( function() {
+				set_border(this);
+			}) */
+		
 		}
 });

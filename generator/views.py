@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from generator.models import Card, Picture, Border, Typeface
-from generator.forms import CreateCardForm
+from generator.forms import *
 import random
 from settings import *
 # Create your views here.
@@ -40,6 +40,7 @@ def createcard(request):
 			random.seed() 
 			hash = random.getrandbits(128)
 			new_card.hashid = str(hash)
+			new_card.ipaddress = request.META.get('REMOTE_ADDR')
 			
 			new_card.save()
 			return render_to_response("confirm.html", locals())

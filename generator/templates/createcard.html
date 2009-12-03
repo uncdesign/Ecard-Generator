@@ -61,38 +61,33 @@
     <div class="fieldWrapper" id="picture_field">
         {{ form.picture.errors }}
         <label for="id_picture">Choose your picture:</label>
-        
         <ul class="optionslist">
         {% for item in picture_list %}
 		<li><label for="id_picture_{{ forloop.counter0 }}"><input type="radio" id="id_picture_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="picture"><img src="{{ item.thumb.url }}" rel="{{ item.full.url }}"></label></li>
 		{% endfor %}
 		</ul>
-        
 		<div class="clearboth"></div>
     </div>
     <div class="fieldWrapper" id="border_field">
         {{ form.border.errors }}
         <label for="id_border">Choose your bow color:</label>
-        
         <ul class="optionslist">
         {% for item in border_list %}
 		<li><label for="id_border_{{ forloop.counter0 }}"><input type="radio" id="id_border_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="border"><img src="{{ item.thumb.url }}" rel="{{ item.preview.url }}"></label></li>
 		{% endfor %}
 		</ul>
-		
 		<div class="clearboth"></div>
     </div>
 
     <div class="fieldWrapper" id="typeface_field">
         {{ form.typeface.errors }}
         <label for="id_typeface">Choose your typestyle:</label>
-        
         <ul class="optionslist">
         {% for item in typeface_list %}
-		<li><label for="id_typeface_{{ forloop.counter0 }}" style="font-family:{{ item.fontstack|safe }}"><input type="radio" id="id_typeface_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="typeface">{{ item }}</label></li>
+		<li><label for="id_typeface_{{ forloop.counter0 }}" style="font-family:{{ item.fontstack|safe }}"><input type="radio" id="id_typeface_{{ forloop.counter0 }}" value="{{ forloop.counter }}" name="typeface">
+		{{ item }}</label></li>
 		{% endfor %}
 		</ul>
-        
         <div class="clearboth"></div>
     </div>
     
@@ -103,7 +98,7 @@
 
 <div class="clearboth"></div>
 
-<div id="copyright">&copy; All rights reserved.</div>
+<div id="copyright">&copy; All rights reserved. </div>
 
 <div class="clearboth"></div>
 
