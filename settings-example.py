@@ -115,4 +115,5 @@ EMAIL_PORT = ''
 
 
 
-from localsettings import * #set this to point to your testsettings or serversettings or whatever
+from testsettings import * 
+#set this to point to your testsettings or serversettings or whatever

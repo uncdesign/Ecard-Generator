@@ -1,8 +1,9 @@
 *.pyc
 .DS_Store
-serversettings.py
 MySQL_python-1.2.2-py2.4-linux-i686.egg-tmp
 cronlog
 cronmailqueue.sh
 googleanalytics.html
 localsettings.py
+serversettings.py
+settings.py
