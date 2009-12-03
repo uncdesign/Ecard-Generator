@@ -10,6 +10,7 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 # Django settings for Ecard-Generator project.
 
 DEBUG = True
+LOCALHOST = True
 TEMPLATE_DEBUG = DEBUG
 
 
@@ -56,7 +57,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'holidaycardgenerator.generator',
+    'generator',
 )
 
 
@@ -114,4 +115,4 @@ EMAIL_PORT = ''
 
 
 
-from serversettings import *
+from testsettings import *

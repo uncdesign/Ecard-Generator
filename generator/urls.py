@@ -1,12 +1,11 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
+from settings import SITE_ROOT
 import os
 from generator.views import displaycard, displaycardhash, createcard, stats
 
 urlpatterns = patterns('',
 
-    (r'^create/$', createcard), # Card Creator
-    
     (r'^$', createcard),
     
     (r'^card/(?P<cardid>.*)/$', displaycardhash), # Display a stored card via the hash id
@@ -16,7 +15,7 @@ urlpatterns = patterns('',
 )
 
 # If Django is in debug mode, allow these URLS to be visible
-if settings.DEBUG:
+if settings.LOCALHOST:
 	urlpatterns += patterns('',
-		(r'^cardid/(?P<cardid>\d+)/', displaycard),
+		(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': os.path.join(SITE_ROOT, 'generator/static')}),
 	)

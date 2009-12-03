@@ -1,3 +1,12 @@
+import os
+import django
+
+
+# calculated paths for django and the site
+# used as starting points for various other paths
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 SITE_URL = 'http://localhost'  # Used to generate urls for web version emails, no trailing slash
 
 ADMINS = (
@@ -16,12 +25,12 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(SITE_ROOT, 'testimages')
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'generator/static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/testimages/'
+MEDIA_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
