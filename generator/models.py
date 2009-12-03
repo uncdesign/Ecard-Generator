@@ -8,7 +8,7 @@ class Card(models.Model):
 	sent = models.BooleanField() # Has the email been sent yet
 	timestamp = models.DateTimeField(auto_now=True)
 	picture = models.ForeignKey('Picture')
-	border = models.ForeignKey('Border', blank=True)
+	border = models.ForeignKey('Border')
 	typeface = models.ForeignKey('Typeface')
 	hashid = models.CharField(max_length = 255) # Access via impossible to memorize or guess URL
 	
@@ -19,7 +19,7 @@ class Picture(models.Model):
 	title = models.CharField(max_length = 255)
 	full = models.FileField(upload_to='pictures')
 	thumb = models.FileField(upload_to='pictures/thumbs')
-	bordercolor = models.CharField(max_length = 255, blank=True)
+	#bordercolor = models.CharField(max_length = 255, blank=True, null=True)
 	
 	def __unicode__(self):
 		return self.title
@@ -30,13 +30,13 @@ class Border(models.Model):
 	cell_2 = models.FileField(upload_to='borders')
 	cell_3 = models.FileField(upload_to='borders')
 	cell_4 = models.FileField(upload_to='borders')
-	cell_5 = models.FileField(upload_to='borders', blank=True)
-	cell_6 = models.FileField(upload_to='borders', blank=True)
-	cell_7 = models.FileField(upload_to='borders', blank=True)
+	#cell_5 = models.FileField(upload_to='borders', blank=True, null=True)
+	#cell_6 = models.FileField(upload_to='borders', blank=True, null=True)
+	#cell_7 = models.FileField(upload_to='borders', blank=True, null=True)
 	cell_8 = models.FileField(upload_to='borders')
 	preview = models.FileField(upload_to='borders')
 	thumb = models.FileField(upload_to='borders/thumbs')
-	bgcolor = models.CharField(max_length = 255, blank=True)	# In case border color bleeds into main text area
+	#bgcolor = models.CharField(max_length = 255, blank=True, null=True)	# In case border color bleeds into main text area
 
 	def __unicode__(self):
 		return self.title

@@ -1,8 +1,26 @@
 // Stylesheet Prepared by Chris Johnson
 // UNC Design Services http://unc.edu/design
 
-body { background: #fff; }
+body { background: #fff; text-align: center;}
 
-#wrapper { background: url(bg.jpg) no-repeat top center; padding-top 3em;}
+#wrapper { width: 901px; height: 612px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; text-align: left; margin-left: auto; margin-right: auto;}
 
 .clearboth	{ clear: both; }
+
+#options ul { list-style: none; }
+
+#options li { float: left; }
+
+#picture_field li { margin-right: 8px;}
+
+#border_field li { margin-right: 30px;}
+
+#typeface_field li { margin-right: 20px;}
+
+#options input { display: none; }
+
+#options label { cursor: pointer }
+
+#livepreview { width: 540px; float: left; }
+
+#livepreview #rightcol { float: right; width: 252px; }

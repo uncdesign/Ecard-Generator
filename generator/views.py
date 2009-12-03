@@ -2,7 +2,6 @@ from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from generator.models import Card, Picture, Border, Typeface
 from generator.forms import CreateCardForm
-from settings import MEDIA_URL
 import random
 # Create your views here.
 
@@ -18,8 +17,6 @@ def displaycardhash(request, cardid):
 	
 def createcard(request):
 	"""Ecard creator form"""
-	
-	mediaurl = MEDIA_URL
 	
 	# Get the options from the db
 	picture_list = Picture.objects.all()
