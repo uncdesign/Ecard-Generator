@@ -54,9 +54,9 @@ ul.optionslist { list-style: none; }
 
 /* .bowpreviews { border: 1px solid pink; } */
 
-#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; background-image: url(/static/chrome/bluepreview.png);}
-#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 166px; background-image: url(/static/chrome/bluepreview.png); background-position: -114px top; }
-#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-image: url(/static/chrome/bluepreview.png); background-position: bottom right;}
+#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; background-image: url(/static/borders/redpreview.png);}
+#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 166px; background-image: url(/static/borders/redpreview.png); background-position: -114px top; }
+#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-image: url(/static/borders/redpreview.png); background-position: bottom right;}
 
 #copyright { font-size: 10px; color: #00467F; margin-left: 110px; margin-top: 15px;}
 

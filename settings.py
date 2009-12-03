@@ -9,7 +9,7 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # Django settings for Ecard-Generator project.
 
-DEBUG = False
+DEBUG = True
 LOCALHOST = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -115,4 +115,4 @@ EMAIL_PORT = ''
 
 
 
-from serversettings import *
+from testsettings import *
