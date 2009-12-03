@@ -28,13 +28,13 @@ class Border(models.Model):
 	title = models.CharField(max_length = 255)
 	cell_1 = models.FileField(upload_to='borders') # Starting at the top left, moving clockwise around a square
 	cell_2 = models.FileField(upload_to='borders')
-	cell_3 = models.FileField(upload_to='borders', blank=True)
+	cell_3 = models.FileField(upload_to='borders')
 	cell_4 = models.FileField(upload_to='borders')
 	cell_5 = models.FileField(upload_to='borders', blank=True)
 	cell_6 = models.FileField(upload_to='borders', blank=True)
 	cell_7 = models.FileField(upload_to='borders', blank=True)
 	cell_8 = models.FileField(upload_to='borders')
-	preview = models.FileField(upload_to='borders', blank=True)
+	preview = models.FileField(upload_to='borders')
 	thumb = models.FileField(upload_to='borders/thumbs')
 	bgcolor = models.CharField(max_length = 255, blank=True)	# In case border color bleeds into main text area
 

@@ -1,0 +1,8 @@
+// Stylesheet Prepared by Chris Johnson
+// UNC Design Services http://unc.edu/design
+
+body { background: #fff; }
+
+#wrapper { background: url(bg.jpg) no-repeat top center; margin-top 3em;}
+
+.clearboth	{ clear: both; }
