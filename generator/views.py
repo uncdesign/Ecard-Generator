@@ -3,15 +3,18 @@ from django.shortcuts import render_to_response, get_object_or_404
 from generator.models import Card, Picture, Border, Typeface
 from generator.forms import CreateCardForm
 import random
+from settings import *
 # Create your views here.
 
 def displaycard(request, cardid):
 	"""Display a card in the database via id"""
+	baseurl = SITE_URL
 	card = get_object_or_404(Card, id=cardid)
 	return render_to_response('displaycard.html', locals())
 	
 def displaycardhash(request, cardid):
 	"""Display a card in the database via hash id"""
+	baseurl = SITE_URL
 	card = get_object_or_404(Card, hashid=cardid)
 	return render_to_response('displaycard.html', locals())
 	

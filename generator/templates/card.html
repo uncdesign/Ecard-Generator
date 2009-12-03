@@ -1,11 +1,81 @@
-	<img src="{{ card.picture.full.url }}">
+<table bgcolor="#BCD5E8" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<p align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#333333">
+
+having trouble viewing this email? <a href="{{ baseurl }}/card/{{ card.hashid }}/"><font color="#333333">click here</font></a> 
+</p>
+<table width="800px" height="573px" cellpadding="0" cellspacing="0" bgcolor="#dfecf7" align="center" style="border:1px solid #999999">
+
+
+    
+    <tr>
+		<td>
+			<img src="{{ baseurl }}{{ card.border.cell_1.url }}"></td>
+		<td>
+			<img src="{{ baseurl }}{{ card.border.cell_2.url }}" alt="Happy Holidays from Carolina!"></td>
+		<td>
+			<img src="{{ baseurl }}{{ card.border.cell_3.url }}"></td>
+	</tr>
+    
 	
-	<div style="font-family:{{ card.typeface.fontstack|safe }}">
-	{{ card.message }}
-	</div>
+    <tr>
+		<td>
+			<img src="{{ baseurl }}{{ card.border.cell_4.url }}"></td>
+		<td bgcolor="#dfecf7">
+                    <!-- main content here -->
+
+			<table cellpadding="0" cellspacing="0">
+             	<tr>
+             		<td>
+                    	<img src="{{ baseurl }}{{ card.picture.full.url }}" border="0" alt="card.picture.title" style="border:3px solid #9BBAD8">
+                    </td>
+                    <td width="20">&nbsp;</td>
+                    <td width="250" valign="top"><br>
+                    
+                    	<br>
+                    	<p face="Georgia, Times, serif" color="#1A1A1A" style="line-height:1.4; font-size:13px">From {{ card.fromname }} ({{ card.fromemail }})</p>
+                    
+                    	<font color="#00467F" style="line-height:1.3; font-size:16px; font-family:{{ card.typeface.fontstack|safe }}">
+                        
+                        {{ card.message }}
+                        
+                        </font><br><br>
+                        <font face="Georgia, Times, serif" color="#1A1A1A" style="line-height:1.4; font-size:13px">
+                        <i>
+                        <a href="{{ baseurl }}">
+                        <font color="#1A1A1A">click here</font></a> to send your own <br>
+							Carolina holiday message
+                    	</i></font>
+                    </td>	
+             	</tr>
+             </table>
+            
+            
+            
+         </td>
+		<td>
+			<img src="{{ baseurl }}/static/borders/default-slices_05.jpg"></td>
+	</tr>
+    
+            
+             
+             
+             
+         
+<tr>
+		<td>
+			<img src="{{ baseurl }}/static/borders/default-slices_06.jpg"></td>
+		<td>
+			<img src="{{ baseurl }}/static/borders/default-slices_07.jpg" alt="&copy;2009 All Rights Reserved The University of North Carolina at Chapel Hill"></td>
+		<td>
+			<img src="{{ baseurl }}{{ card.border.cell_8.url }}"></td>
+	</tr>
+
+</table>
+<br><br><br>
+</td></tr>
+
+</table>
+
+
 	
-	<img src="{{ card.border.thumb.url }}">
 	
-	<p>From {{ card.fromname }}<br>
-	{{ card.fromemail }}	
-	</p>

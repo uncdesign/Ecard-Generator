@@ -6,11 +6,13 @@ class Card(models.Model):
 	fromname = models.CharField(max_length = 255)
 	message = models.TextField()
 	sent = models.BooleanField() # Has the email been sent yet
+	spam = models.BooleanField() # Is this email spam?
 	timestamp = models.DateTimeField(auto_now=True)
 	picture = models.ForeignKey('Picture')
 	border = models.ForeignKey('Border')
 	typeface = models.ForeignKey('Typeface')
 	hashid = models.CharField(max_length = 255) # Access via impossible to memorize or guess URL
+	ipaddress = models.CharField(max_length = 255) # Who sent this?
 	
 	def __unicode__(self):
 		return u'%s' % (self.id)
@@ -35,7 +37,7 @@ class Border(models.Model):
 	#cell_7 = models.FileField(upload_to='borders', blank=True, null=True)
 	cell_8 = models.FileField(upload_to='borders')
 	preview = models.FileField(upload_to='borders')
-	thumb = models.FileField(upload_to='borders/thumbs')
+	thumb = models.FileField(upload_to='borders')
 	#bgcolor = models.CharField(max_length = 255, blank=True, null=True)	# In case border color bleeds into main text area
 
 	def __unicode__(self):

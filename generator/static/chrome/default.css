@@ -14,9 +14,9 @@ a:hover { color: #6699cc; }
 
 .clearboth	{ clear: both; }
 
-#options { float: left; width: 230px; margin-top: 160px;}
+#options { float: left; width: 230px; margin-top: 160px; z-index: 1}
 
-#options .fieldWrapper { margin-bottom: 1em; }
+#options .fieldWrapper { margin-bottom: .75em; }
 
 ul.optionslist { list-style: none; }
 
@@ -38,13 +38,13 @@ ul.optionslist { list-style: none; }
 
 #livepreview #rightcol { float: left; width: 252px; }
 
-#livepreview #picture { float: left; border: 2px solid #9BBAD8; margin-right: 15px; }
+#livepreview #picture { float: left; border: 3px solid #9BBAD8; margin-right: 15px; }
 
-#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; }
+#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; z-index: 2}
 
 #fromemail_field input, #fromname_field input, #toemail_field input { padding: 5px; }
 
-#message_field textarea { width: 252px; background: none; font-family: Courier; z-index: 10; font-size: 13px; line-height: 1.4; height: 120px; }
+#message_field textarea { width: 252px; background: none; font-family: Courier; font-size: 13px; line-height: 1.4; height: 120px; }
 
 #sendbutton { float: right; margin-right: -10px; }
 
@@ -59,6 +59,6 @@ ul.optionslist { list-style: none; }
 #copyright { font-size: 10px; color: #00467F; margin-left: 110px; margin-top: 15px;}
 
 
-#msg { font-size: 1.2em; font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; background: #fff; width: 50%; padding: 20px; z-index: 10; margin-top: 200px; margin-left: 150px; float: left;  }
+#msg { font-size: 1.2em; font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; background: #fff; width: 50%; padding: 20px; z-index: 3; margin-top: 200px; margin-left: 150px; float: left;  }
 
 #msg h3 { color:#003d67; font-size: 1.4em;  }
