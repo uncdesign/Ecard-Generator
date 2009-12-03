@@ -10,7 +10,13 @@ $(document).ready(function() {
 			$('#createcard').wrap('<form action="" method="POST"></form>');
 			$('#rightcol').append('<input type="image" src="/static/chrome/send.png" id="sendbutton">');
 	
-	
+			/*$('textarea').bind("focus", function() { 
+			  $(this).caret(this.value.length); 
+			}); */
+			
+			$('textarea').focus();
+			
+			
 			function set_typeface(selected){
 				$('textarea').css('font-family', $(selected).css('font-family'));
 			}
@@ -38,10 +44,5 @@ $(document).ready(function() {
 			})
 			
 			
-			
-			/* $('#border_field input:radio').filter(':checked').ready( function() {
-				set_border(this);
-			}) */
-		
 		}
 });

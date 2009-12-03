@@ -9,7 +9,7 @@ class CreateCardForm(ModelForm):
 	picture = ModelChoiceField(widget=RadioSelect, queryset=Picture.objects.all(), required=True, empty_label=None)
 	typeface = ModelChoiceField(widget=RadioSelect, queryset=Typeface.objects.all(), required=True, empty_label=None)
 	border = ModelChoiceField(widget=RadioSelect, queryset=Border.objects.all(), required=True, empty_label=None)
-	message = CharField(widget=Textarea, required=True, max_length=230)
+	message = CharField(widget=Textarea, required=True, max_length=230, initial='Write your greeting here')
 	
 	class Meta:
 		model = Card

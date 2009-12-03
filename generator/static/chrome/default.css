@@ -28,7 +28,7 @@ ul.optionslist { list-style: none; }
 
 #typeface_field .optionslist li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
-/* #options input { display: none; } */
+#options input { display: none; }
 
 #options label { cursor: pointer }
 
