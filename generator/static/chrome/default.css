@@ -32,7 +32,11 @@ a:hover { color: #6699cc; }
 
 #options input { display: none; }
 
+#options input:checked {border: red solid 1px; }
+
 #options label { cursor: pointer }
+
+.checked { font-weight: bold; border: red solid 1px; }
 
 #livepreview { width: 510px; float: left; padding: 15px; background: #DFEAF4; border: 1px solid #C6C8CC;  margin-top: 150px; margin-left: 80px; margin-right: 25px;}
 
@@ -48,15 +52,15 @@ a:hover { color: #6699cc; }
 
 #sendbutton { float: right; margin-right: -10px; }
 
-.errorlist { list-style: none; font-size: 11px; color: red; }
+.errorlist { list-style: none; font-size: 11px; background: #B22222; color: #fff; text-align: center;}
 
 #options ul.errorlist li { float: none; }
 
-/* .bowpreviews { border: 1px solid pink; } */
+.bowpreviews { background-image: url(/static/borders/bluepreview.png);} 
 
-#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; background-image: url(/static/borders/redpreview.png);}
-#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 166px; background-image: url(/static/borders/redpreview.png); background-position: -114px top; }
-#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-image: url(/static/borders/redpreview.png); background-position: bottom right;}
+#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; }
+#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 170px; background-position: -114px top; }
+#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-position: bottom right;}
 
 #copyright { font-size: 10px; color: #00467F; margin-left: 110px; margin-top: 15px;}
 

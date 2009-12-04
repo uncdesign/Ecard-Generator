@@ -13,7 +13,7 @@ $(document).ready(function() {
 			$('#rightcol').append('<input type="image" src="/static/chrome/send.png" id="sendbutton">');
 
 
-			$('textarea').focus(); // Put the cursor in the text box
+		
 			
 			//Live Preview Code
 			
@@ -28,7 +28,6 @@ $(document).ready(function() {
 			function set_border(selected){
 				$('.bowpreviews').css('background-image', 'url(' + $(selected).find('img').attr('rel') + ')' )
 			}
-			
 			
 			
 			$('#typeface_field label').click( function() {
@@ -46,5 +45,6 @@ $(document).ready(function() {
 			// If there are fields selected when the form loads, show the preview of the selection
 			$('input:radio:checked').click(); 		
 				
+			$('textarea').focus(); // Put the cursor in the text box
 		}
 });
