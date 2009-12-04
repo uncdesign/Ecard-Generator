@@ -21,7 +21,7 @@ class CreateCardForm(ModelForm):
 	toemail = EmailField(required=True, max_length=255)
 	fromemail = EmailField(required=True, max_length=255)
 	picture = PictureModelChoiceField(widget=RadioSelect, queryset=Picture.objects.all(), required=True, empty_label=None)
-	typeface = TypefaceModelChoiceField(widget=RadioSelect, queryset=Typeface.objects.all(), required=True, empty_label=None, initial='2')
+	typeface = TypefaceModelChoiceField(widget=RadioSelect, queryset=Typeface.objects.all(), required=True, empty_label=None, initial='1')
 	border = BorderModelChoiceField(widget=RadioSelect, queryset=Border.objects.all(), required=True, empty_label=None, initial='1')
 	message = CharField(widget=Textarea, required=True, max_length=230)
 	
