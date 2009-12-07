@@ -12,8 +12,10 @@ $(document).ready(function() {
 			$('#createcard').wrap('<form action="" method="POST"></form>');
 			$('#rightcol').append('<input type="image" src="/static/chrome/send.png" id="sendbutton">');
 
-
-		
+			//Fix IE label select bug
+	 		$('#options li label').bind("click", function(){
+				('input',this).click();
+		    });
 			
 			//Live Preview Code
 			

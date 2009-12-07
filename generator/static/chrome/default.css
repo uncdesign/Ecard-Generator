@@ -16,7 +16,7 @@ a:hover { color: #6699cc; }
 
 .clearboth	{ clear: both; }
 
-#options { float: left; width: 230px; margin-top: 160px; z-index: 1}
+#options { float: left; width: 230px; margin-top: 160px; z-index: 15; position: relative;}
 
 #options .fieldWrapper { margin-bottom: .75em; }
 
@@ -30,9 +30,9 @@ a:hover { color: #6699cc; }
 
 #typeface_field li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
-#options input { display: none; }
+/* #options input { display: none; } */
 
-#options input:checked {border: red solid 1px; }
+#options .selected {border: red solid 1px; }
 
 #options label { cursor: pointer }
 
