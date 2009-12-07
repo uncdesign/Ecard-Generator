@@ -30,7 +30,7 @@ a:hover { color: #6699cc; }
 
 #typeface_field li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
 
-/* #options input { display: none; } */
+#options input { display: none; }
 
 #options .selected {border: red solid 1px; }
 
