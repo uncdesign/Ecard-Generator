@@ -51,9 +51,10 @@ def createcard(request):
 	
 def stats(request):
 	"""Show card statistics"""
-	cards_unsent = Card.objects.filter(sent=False).count()
+	cards_unsent = Card.objects.filter(sent=False).filter(spam=False).count()
+	cards_spam = Card.objects.filter(spam=True).count()
 	cards_in_db = Card.objects.count()
 	lastest_card = Card.objects.latest('id')
 	cards_total = lastest_card.id
-	cards_sent = cards_total - cards_unsent
+	cards_sent = cards_total - cards_unsent - cards_spam
 	return render_to_response("stats.html", locals())
