@@ -22,8 +22,8 @@ class Command(NoArgsCommand):
 				msg.send()
 			except SMTPRecipientsRefused:
 				card.spam = True
+				card.save()
 			else:
 				card.sent = True
-			finally:
 				card.save()
 		return '\n'.join(['id: %s spam: %s time: %s hash id: %s sent: %s' % (k.id, k.spam, k.timestamp, k.hashid, k.sent) for k in unsentcards]).encode('utf-8')
