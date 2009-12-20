@@ -18,12 +18,7 @@ class Command(NoArgsCommand):
 			html_content = render_to_string('card.html', locals())
 			msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 			msg.attach_alternative(html_content, "text/html")
-			try:
-				msg.send()
-			except SMTPRecipientsRefused:
-				card.spam = True
-				card.save()
-			else:
+			if msg.send():
 				card.sent = True
 				card.save()
 		return '\n'.join(['id: %s spam: %s time: %s hash id: %s sent: %s' % (k.id, k.spam, k.timestamp, k.hashid, k.sent) for k in unsentcards]).encode('utf-8')
