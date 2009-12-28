@@ -1,0 +1,41 @@
+h2. Debugging email sending
+
+Open local smtp server in shell: python -m smtpd -n -c DebuggingServer localhost:1025
+
+In settings.py file set:
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = '1025'
+
+h2. Make debug server show up to the outside world
+
+python manage.py runserver 0.0.0.0:8000
+
+h2. Update a model
+
+1. Make changes to the model, but donÕt save
+2. $ python manage.py dumpdata [app(.optionalmodel)] > dump.json
+3. Save the changed models.py
+4. $ python manage.py reset [app]
+5. $ python manage.py loaddata dump.json
+
+h2. Other
+
+Email queue cron: python manage.py mailqueue
+
+Set all emails in database to unsent: python manage.py setunsent
+
+vlad: from django.utils.safestring import mark_safe
+vlad: class PictorialModelChoiceField(ModelChoiceField):
+vlad: def label_from_instance(self,obj):
+vlad: return mark_safe('<img src="%s">' % (obj.thumb.url))
+vlad: three-line solution to your widget problem
+
+h2. Media Temple Notes
+
+Admin media is already setup to work
+
+How to setup static content serving from inside your project directory http://kb.mediatemple.net/questions/870/Serving+static+content+outside+of+your+%28gc%29+Django+GridContainer
+^^^ Pay close attention to the path they use
+
+Media Temple hack keeps main.fgi from being prepended to the admin urls, add to the settings file
+FORCE_SCRIPT_NAME = ''

@@ -1,0 +1,25 @@
+Add cleanup cron job	 	
+ 		
+
+Add client side validation	 	
+ 		
+
+Add help page, or help contact	 	
+ 		
+
+Add help text to models for admin	 	
+ 		
+
+Add published bool to pictures, typefaces, borders models	 	
+ 		
+
+Add social media links	 	
+ 		
+
+Add spam detection	 	
+ 		
+
+Add thickbox preview	 	
+ 		
+
+Style selected options
