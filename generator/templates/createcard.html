@@ -23,20 +23,20 @@
 	
 	<div class="fieldWrapper" id="toemail_field">
 		 {{ form.toemail.errors }}
-		 <label for="id_toemail">Send to (e-mail)</label><br>
+		 <label for="id_toemail">To (e-mail)</label>
 	{{ form.toemail }}
 	</div>
 	
 	<div class="fieldWrapper" id="fromname_field">
 		{{ form.fromname.errors }}
-		<label for="id_fromname">Your name:</label><br>
+		<label for="id_fromname">Your name</label>
 		{{ form.fromname }}
 	</div>
 	
 	
 	<div class="fieldWrapper" id="fromemail_field">
 		{{ form.fromemail.errors }}
-		<label for="id_fromemail">From (e-mail)</label><br>
+		<label for="id_fromemail">Your e-mail</label>
 		{{ form.fromemail }}
 	</div>
 	
@@ -46,7 +46,7 @@
 	
 <div class="fieldWrapper" id="picture_field">
     {{ form.picture.errors }}
-    <label for="id_picture">Choose your picture:</label>
+    <label for="id_picture" class="hide">Choose your picture:</label>
     
     {{ form.picture }}
     
@@ -56,7 +56,7 @@
 
 <div class="fieldWrapper" id="message_field">
 	{{ form.message.errors }}
-	 <label for="id_message">Your greeting:</label>
+	 <label for="id_message">Your message:</label>
 	{{ form.message }}
 </div><!--#message_field-->
 
@@ -78,7 +78,7 @@
 			islessthanie7 = True;
 		</script>
 		<style type="text/css"> 
-			#msg span, .bowpreviews { display:none; }
+			#msg span { display:none; }
 			#msg {width: 75%; margin-left: 50px;}
 		</style>
 		<br>

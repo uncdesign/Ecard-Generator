@@ -18,18 +18,36 @@ a:hover { color: #6699cc; }
 
 .debug #sendbutton, .debug #picture { border: 1px dotted red; }
 
-#address { position: absolute; top: 93px ; left: 300px; }
+#address { position: absolute; top: 95px ; left: 300px; width: 225px; }
 
-#picture { position: absolute; top: 223px; left: 195px; }
+#address .fieldWrapper { position: relative; margin-bottom: 7px; }
 
-#picture_field { position: absolute; top: 230px; left: 585px; }
+#address .fieldWrapper input { position: absolute; right: 0; background: #fff; border: none; border-bottom: 1px dashed #363837; }
 
-#message_field { position: absolute; top: 787px; left: 195px; }
+#address .errorlist { position: absolute; left: -200px; width: 175px; text-align: right; }
 
-#options .fieldWrapper ul { list-style: none; }
+#picture { position: absolute; top: 224px; left: 196px; }
 
-.errorlist { list-style: none; font-size: 11px; background: #B22222; color: #fff; text-align: center;}
+#picture_field { position: absolute; top: 228px; left: 595px; }
+
+#picture_field ul, #picture_field li { list-style: none; }
+
+#picture_field li { position: relative; height: 100px; width: 71px; padding: 3px; background: #3f6a9a; margin-bottom: 20px; box-shadow: 1px 1px 3px rgba(0,0,0,.5); -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.5); -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.5);   }
+
+#picture_field img { position: absolute; left: 3px; box-shadow: 1px 1px 2px rgba(0,0,0,.35); -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.35); -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.35); }
+
+#picture_field .errorlist { width: 71px; margin-bottom: 5px; }
+
+#message_field { position: absolute; top: 777px; left: 195px; color: #fff; }
+
+#message_field label { display: block; }
+
+#message_field .errorlist { float: right; margin-bottom: 2px; }
+
+#id_message { background: none; color: #fff; border: 1px dashed #dbe5ec; width: 348px; height: 120px; }
+
+.errorlist, #picture_field .errorlist li { list-style: none; font-size: 11px; background: #B22222; color: #fff; text-align: center; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; padding: 1px 3px; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; width: auto; height: auto; margin-bottom: auto;  }
 
 #sendbutton { position: absolute; top: 904px; left: 554px; }
 
-#copyright { position: absolute; bottom: 5px; left: 8px; } 
+#copyright { position: absolute; bottom: 5px; left: 8px; font-size: 10px; } 

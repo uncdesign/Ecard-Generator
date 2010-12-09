@@ -8,7 +8,7 @@ DEBUG = True
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
-SITE_URL = 'http://152.2.194.196:8000'  # Used to generate urls for web version emails, no trailing slash
+SITE_URL = 'http://152.2.194.185:8000'  # Used to generate urls for web version emails, no trailing slash
 
 ADMINS = (
 	('Chris Johnson', 'chrisltd@unc.edu'),
