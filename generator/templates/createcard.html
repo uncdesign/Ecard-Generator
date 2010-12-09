@@ -17,93 +17,52 @@
 
 <div id="createcard" class="disabled-default">
 
-<div class="hide">
+<h1 class="hide">Create and send your own card</h1>
 
-<h1>Happy Holidays from Carolina!</h1>
-
-</div>
-
-<div id="livepreview">
-
-	<img id="picture" src="/static/chrome/blankimage.jpg">
-
-	<div id="rightcol">
-		
-		<div class="fieldWrapper" id="message_field">
-			{{ form.message.errors }}
-			 <label for="id_message">Your greeting:</label>
-			{{ form.message }}
-    	</div>
-    	
-    	<div class="fieldWrapper" id="fromname_field">
-			{{ form.fromname.errors }}
-			<label for="id_fromname">Your name:</label><br>
-			{{ form.fromname }}
-		</div>
-		
-		
-		<div class="fieldWrapper" id="fromemail_field">
-			{{ form.fromemail.errors }}
-			<label for="id_fromemail">From (e-mail)</label><br>
-			{{ form.fromemail }}
-		</div>
-		
-		<div class="fieldWrapper" id="toemail_field">
-       		 {{ form.toemail.errors }}
-       		 <label for="id_toemail">Send to (e-mail)</label><br>
-        	{{ form.toemail }}
-		</div>
-
-		
-	    
+<div id="address">
 	
-	</div><!--/rightcol-->
+	<div class="fieldWrapper" id="toemail_field">
+		 {{ form.toemail.errors }}
+		 <label for="id_toemail">Send to (e-mail)</label><br>
+	{{ form.toemail }}
+	</div>
 	
+	<div class="fieldWrapper" id="fromname_field">
+		{{ form.fromname.errors }}
+		<label for="id_fromname">Your name:</label><br>
+		{{ form.fromname }}
+	</div>
+	
+	
+	<div class="fieldWrapper" id="fromemail_field">
+		{{ form.fromemail.errors }}
+		<label for="id_fromemail">From (e-mail)</label><br>
+		{{ form.fromemail }}
+	</div>
+	
+</div><!--#address-->
+
+<img id="picture" src="/static/chrome/clear.gif" width="352" height="493">
+	
+<div class="fieldWrapper" id="picture_field">
+    {{ form.picture.errors }}
+    <label for="id_picture">Choose your picture:</label>
+    
+    {{ form.picture }}
+    
 	<div class="clearboth"></div>
-	
-</div><!--/card_live_preview-->		
-
-<div id="options">
-    <div class="fieldWrapper" id="picture_field">
-        {{ form.picture.errors }}
-        <label for="id_picture">Choose your picture:</label>
-        
-        {{ form.picture }}
-        
-		<div class="clearboth"></div>
-    </div>
-    <div class="fieldWrapper" id="border_field">
-        {{ form.border.errors }}
-        <label for="id_border">Change your bow color:</label>
-     
-     	{{ form.border }}
-     
-		<div class="clearboth"></div>
-    </div>
-
-    <div class="fieldWrapper" id="typeface_field">
-        {{ form.typeface.errors }}
-        <label for="id_typeface">Change your typestyle:</label>
-		
-		{{ form.typeface }}
-		
-        <div class="clearboth"></div>
-    </div>
-    
-    
-   	
-</div><!--/options-->
+</div><!--#picture_field-->
 
 
-<div class="clearboth"></div>
-
-<div id="copyright">&copy; All rights reserved. </div>
-
-<div class="clearboth"></div>
-
+<div class="fieldWrapper" id="message_field">
+	{{ form.message.errors }}
+	 <label for="id_message">Your greeting:</label>
+	{{ form.message }}
+</div><!--#message_field-->
 
 </div><!--/createcard-->
 
+<div id="copyright">&copy; All rights reserved. </div>
 
 
 <div id="msg">
@@ -130,13 +89,6 @@
 </div><!--/msg -->
 
 <div class="clearboth"></div>
-
-
-<div class="hide" id="bowpreload">
-	{% for item in border_list %}
-		<img src="{{ item.preview.url }}" width="1" height="1">
-	{% endfor %}	
-</div>
 
 
 {% endblock %}

@@ -5,7 +5,7 @@ UNC Design Services http://unc.edu/design
 
 body { background: #BCD5E8; text-align: center; }
 
-#wrapper { width: 901px; height: 612px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; position: relative; font-size: 12px; color: #363837; }
+#wrapper { width: 750px; height: 964px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: Georgia, 'Times New Roman', Times, serif; position: relative; font-size: 12px; color: #363837; }
 
 a { text-decoration: underline; color: #363837; }
 a:hover { color: #6699cc; }
@@ -16,55 +16,20 @@ a:hover { color: #6699cc; }
 
 .clearboth	{ clear: both; }
 
-#options { float: left; width: 230px; margin-top: 160px; z-index: 15; position: relative;}
+.debug #sendbutton, .debug #picture { border: 1px dotted red; }
 
-#options .fieldWrapper { margin-bottom: .75em; }
+#address { position: absolute; top: 93px ; left: 300px; }
+
+#picture { position: absolute; top: 223px; left: 195px; }
+
+#picture_field { position: absolute; top: 230px; left: 585px; }
+
+#message_field { position: absolute; top: 787px; left: 195px; }
 
 #options .fieldWrapper ul { list-style: none; }
 
-#options .fieldWrapper li { float: left; }
-
-#picture_field li { margin-right: 8px;}
-
-#border_field li { margin-right: 30px;}
-
-#typeface_field li { margin-right: 15px; text-decoration: underline; font-size: 1.2em;}
-
-#options input { line-height: 0; margin-left: -9999px; text-indent: -9999px; position: absolute; }
-
-#options .selected {border: red solid 1px; }
-
-#options label { cursor: pointer }
-
-.checked { font-weight: bold; border: red solid 1px; }
-
-#livepreview { width: 510px; float: left; padding: 15px; background: #DFEAF4; border: 1px solid #C6C8CC;  margin-top: 150px; margin-left: 80px; margin-right: 25px;}
-
-#livepreview .fieldWrapper { margin-bottom: .5em; }
-
-#livepreview #rightcol { float: left; width: 252px; }
-
-#livepreview #picture { float: left; border: 3px solid #9BBAD8; margin-right: 15px; }
-
-#fromemail_field input, #fromname_field input, #toemail_field input, #message_field textarea { border: 0; width: 247px; z-index: 2; background: #f4f8fb; padding: 5px;}
-
-#message_field textarea { font-family: Courier; font-size: 13px; line-height: 1.4; height: 90px; color: #00467F; }
-
-#sendbutton { float: right; margin-right: -10px; }
-
 .errorlist { list-style: none; font-size: 11px; background: #B22222; color: #fff; text-align: center;}
 
-#options ul.errorlist li { float: none; }
+#sendbutton { position: absolute; top: 904px; left: 554px; }
 
-.bowpreviews { background-image: url(/static/borders/bluepreview.png);} 
-
-#bow_top_left { position: absolute; top:0; left: 0; width: 113px; height: 224px; }
-#bow_top_left_text { position: absolute; top:0; left: 113px; width: 759px; height: 170px; background-position: -114px top; }
-#bow_bottom_right { position: absolute; bottom:0; right: 0; width: 268px; height: 141px;  background-position: bottom right;}
-
-#copyright { font-size: 10px; color: #00467F; margin-left: 110px; margin-top: 15px;}
-
-
-#msg { font-size: 1.2em; font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif; background: #fff; width: 50%; padding: 20px; z-index: 3; margin-top: 200px; margin-left: 150px; float: left;  }
-
-#msg h3 { color:#003d67; font-size: 1.4em;  }
+#copyright { position: absolute; bottom: 5px; left: 8px; } 

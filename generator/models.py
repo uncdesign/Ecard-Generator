@@ -9,8 +9,6 @@ class Card(models.Model):
 	spam = models.BooleanField() # Is this email spam?
 	timestamp = models.DateTimeField(auto_now=True)
 	picture = models.ForeignKey('Picture')
-	border = models.ForeignKey('Border')
-	typeface = models.ForeignKey('Typeface')
 	hashid = models.CharField(max_length = 255) # Access via impossible to memorize or guess URL
 	ipaddress = models.CharField(max_length = 255) # Who sent this?
 	
@@ -23,29 +21,5 @@ class Picture(models.Model):
 	thumb = models.FileField(upload_to='pictures/thumbs')
 	#bordercolor = models.CharField(max_length = 255, blank=True, null=True)
 	
-	def __unicode__(self):
-		return self.title
-
-class Border(models.Model):
-	title = models.CharField(max_length = 255)
-	cell_1 = models.FileField(upload_to='borders') # Starting at the top left, moving clockwise around a square
-	cell_2 = models.FileField(upload_to='borders')
-	cell_3 = models.FileField(upload_to='borders')
-	cell_4 = models.FileField(upload_to='borders')
-	#cell_5 = models.FileField(upload_to='borders', blank=True, null=True)
-	#cell_6 = models.FileField(upload_to='borders', blank=True, null=True)
-	#cell_7 = models.FileField(upload_to='borders', blank=True, null=True)
-	cell_8 = models.FileField(upload_to='borders')
-	preview = models.FileField(upload_to='borders')
-	thumb = models.FileField(upload_to='borders')
-	#bgcolor = models.CharField(max_length = 255, blank=True, null=True)	# In case border color bleeds into main text area
-
-	def __unicode__(self):
-		return self.title
-
-class Typeface(models.Model):
-	title = models.CharField(max_length = 255)
-	fontstack = models.TextField() # CSS font stack
-
 	def __unicode__(self):
 		return self.title

@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render_to_response, get_object_or_404
-from generator.models import Card, Picture, Border, Typeface
+from generator.models import Card, Picture
 from generator.forms import *
 import random
 from settings import *
@@ -23,8 +23,6 @@ def createcard(request):
 	
 	# Get the options from the db
 	picture_list = Picture.objects.all()
-	typeface_list = Typeface.objects.all()
-	border_list = Border.objects.all()
 	
 	# Create Form from models
 	form = CreateCardForm()
