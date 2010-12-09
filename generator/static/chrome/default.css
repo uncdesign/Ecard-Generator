@@ -5,7 +5,9 @@ UNC Design Services http://unc.edu/design
 
 body { background: #BCD5E8; text-align: center; }
 
-#wrapper { width: 750px; height: 964px; background: url(bg.jpg) no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: Georgia, 'Times New Roman', Times, serif; position: relative; font-size: 12px; color: #363837; }
+#wrapper { width: 750px; no-repeat top center; margin-top: 3em; margin-bottom: 3em; text-align: left; margin-left: auto; margin-right: auto; font-family: Georgia, 'Times New Roman', Times, serif; position: relative; font-size: 12px; color: #363837; }
+
+#createcard { width: 750px; height: 964px; background: url(bg.jpg) }
 
 a { text-decoration: underline; color: #363837; }
 a:hover { color: #6699cc; }
@@ -51,3 +53,8 @@ a:hover { color: #6699cc; }
 #sendbutton { position: absolute; top: 904px; left: 554px; }
 
 #copyright { position: absolute; bottom: 5px; left: 8px; font-size: 10px; } 
+
+#msg h3 { font-size: 24px; }
+
+#msg { font-size: 16px; text-align: center;  background: #fff; padding: 2em 1em;}
+

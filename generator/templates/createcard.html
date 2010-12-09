@@ -11,6 +11,15 @@
 	<script type="text/javascript" src="/static/chrome/createcard.ie.js"></script>
 <![endif]-->
 
+<script type="text/javascript">
+	document.write('\n<style type="text/css">\n');
+	document.write('<!--\n');
+	document.write('.disabled-default { display: block; }\n');
+	document.write('#msg { display: none; }\n');
+	document.write('-->\n');
+	document.write('</style>\n');
+</script>
+
 {% endblock %}
 
 {% block content %}
@@ -62,7 +71,7 @@
 
 </div><!--/createcard-->
 
-<div id="copyright">&copy; All rights reserved. </div>
+<div id="copyright" class="disabled-default">&copy; All rights reserved. </div>
 
 
 <div id="msg">
@@ -78,9 +87,10 @@
 			var islessthanie7 = true;
 		</script>
 		<style type="text/css"> 
+			#msg { display: block; } 
 			#msg span { display:none; }
 			#msg {width: 75%; margin-left: 50px;}
-			h3 { font-size: 3em; }
+			#createcard { display: none; }
 			#wrapper { background: none; height: 400px; }
 			#copyright { display: none; }
 		</style>

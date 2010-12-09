@@ -5,8 +5,6 @@ $(document).ready(function() {
 			//You're using IE6
 		}
 		else {
-			$('.disabled-default').show();
-			$('#msg').hide();
 			
 			//Hide form stuff from non-JS bots
 			$('#createcard').wrap('<form action="" method="POST"></form>');
@@ -25,6 +23,5 @@ $(document).ready(function() {
 			// If there are fields selected when the form loads, show the preview of the selection
 			$('input:radio:checked').click(); 		
 				
-			$('textarea').focus(); // Put the cursor in the text box
 		}
 });

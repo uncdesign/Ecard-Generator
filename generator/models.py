@@ -19,7 +19,9 @@ class Picture(models.Model):
 	title = models.CharField(max_length = 255)
 	full = models.FileField(upload_to='pictures')
 	thumb = models.FileField(upload_to='pictures/thumbs')
-	#bordercolor = models.CharField(max_length = 255, blank=True, null=True)
+	
+	class Meta:
+		ordering = ['title']
 	
 	def __unicode__(self):
 		return self.title
