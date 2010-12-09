@@ -23,5 +23,7 @@ $(document).ready(function() {
 			// If there are fields selected when the form loads, show the preview of the selection
 			$('input:radio:checked').click(); 		
 				
+				
+			$("#id_message").attr("maxlength","230");
 		}
 });

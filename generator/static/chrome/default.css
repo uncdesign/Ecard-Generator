@@ -20,11 +20,11 @@ a:hover { color: #6699cc; }
 
 .debug #sendbutton, .debug #picture { border: 1px dotted red; }
 
-#address { position: absolute; top: 95px ; left: 300px; width: 225px; }
+#address { position: absolute; top: 95px ; left: 300px; width: 225px;  }
 
 #address .fieldWrapper { position: relative; margin-bottom: 7px; }
 
-#address .fieldWrapper input { position: absolute; right: 0; background: #fff; border: none; border-bottom: 1px dashed #363837; }
+#address .fieldWrapper input { position: absolute; right: 25px; background: #fff; border: none; border-bottom: 1px dashed #363837; font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif; }
 
 #address .errorlist { position: absolute; left: -200px; width: 175px; text-align: right; }
 
@@ -46,7 +46,7 @@ a:hover { color: #6699cc; }
 
 #message_field .errorlist { position: absolute; left: 120px; }
 
-#id_message { background: none; color: #fff; border: 1px dashed #dbe5ec; width: 348px; height: 120px; }
+#id_message { background: none; color: #fff; border: 1px dashed #dbe5ec; width: 348px; height: 120px; overflow: hidden; font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif; }
 
 .errorlist, #picture_field .errorlist li { list-style: none; font-size: 11px; background: #B22222; color: #fff; text-align: center; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; padding: 1px 3px; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; width: auto; height: auto; margin-bottom: auto;  }
 
