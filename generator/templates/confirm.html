@@ -1,15 +1,33 @@
-{% extends "base.html" %}
-
-{% block title %}Thank you{% endblock %}
-
-{% block content %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>Thank you</title>
+	
+	<link rel="Shortcut Icon" href="/static/chrome/favicon.ico" type="image/x-icon">
+	
+	<style type="text/css">
+		body { background: #BCD5E8; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px; color: #363837; margin: 4em; line-height: 1.6; }	
+		
+		#msg { background: #fff; padding: 4em 8em; display: inline-block; -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.5); -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.5);  }
+		
+		a { text-decoration: underline; color: #6699cc; }
+		a:hover { background-color: #eef7aa; color: #000;  }
+		
+		h3 { color: #243954; font-style: italic; font-weight: normal; font-size: 20px; }
+	</style>
+	
+</head>
+<body>
 
 <div id="msg">
 
-	<h3>Thank you for spreading Carolina Cheer.</h3> 
+	<h3>Thank you for spreading Carolina Cheer!</h3> 
 	
-	<span><a href="/">Click here</a> to create another Carolina holiday message or <a href="/card/{{ new_card.hashid }}/">see the message you just created</a>.</span>
+	<span><a href="/">Click here</a> to create another card<br>or <a href="/card/{{ new_card.hashid }}/">see the one you just created</a>.</span>
 
 </div><!--/msg -->
 
-{% endblock %}
+</body>
+</html>

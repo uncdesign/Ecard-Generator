@@ -42,7 +42,7 @@ a:hover { color: #6699cc; }
 
 #message_field label { display: block; }
 
-#message_field .errorlist { float: right; margin-bottom: 2px; }
+#message_field .errorlist { position: absolute; left: 120px; }
 
 #id_message { background: none; color: #fff; border: 1px dashed #dbe5ec; width: 348px; height: 120px; }
 

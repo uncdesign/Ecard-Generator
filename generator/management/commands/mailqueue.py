@@ -1,5 +1,5 @@
 from django.core.management.base import NoArgsCommand
-from generator.models import Card, Picture, Border, Typeface
+from generator.models import Card, Picture
 from django.core.mail import EmailMultiAlternatives, send_mail
 from django.shortcuts import render_to_response
 from django.template.loader import render_to_string
